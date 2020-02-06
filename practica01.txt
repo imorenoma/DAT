@@ -1,0 +1,73 @@
+Ivan Moreno Martin ivmoreno
+
+Analiza con el W3C Markup Validation Service el 
+codigo de 3 sitios web. Han de pertenecer a organismos o empresas 
+de cierta relevancia.
+
+En el fichero ~/dat/practica01.txt escribe un informe con los resultados,
+explicando en que  consisten y como se arreglaran. No es necesario que 
+los describas todos, es suficiente con 10 errores (entre las tres paginas).
+----------------------------------------------------------------------------
+https://twitter.com
+
+Error: A link element with a sizes attribute must have a rel attribute that contains the value icon or the value apple-touch-icon or the value apple-touch-icon-precomposed.
+
+From line 53, column 1; to line 53, column 110
+
+En este caso el error que vemos es que el el tag link que tiene un atributo de
+size debe haber un atributo rel que contenga apple-touch-icon o bien apple-touch-icon-precomposed.
+
+
+
+Error: Element img is missing required attribute src
+
+En este caso es un error en el que el tag img le falta el atributo src, 
+es decer se ha creado un tag img vacio
+
+
+Error: Element p not allowed as child of element label in this context. (Suppressing further errors from this subtree.)
+
+Este es un error curioso en el que se ha insertado un tag p dentro de un tag
+label y nos esta avisando que no esta permitido.
+
+
+
+https://www.elmundo.es
+
+Error:Element meta is missing one or more of the following attributes: itemprop, property.
+
+
+En este error vemos que en elemento meta le faltan atributos(itemprop, property)
+se solucionaria insertando estos atributos dentro del tag meta
+
+
+Error: Duplicate ID pixelcontabilizacionNLalerta.
+
+vemos que aqui el fallo esta en que el id de un div esta duplicado, la solucion
+seria cambiar este id por otro.
+
+
+Attribute años"" not allowed on element img at this point.
+
+Este fallo puede ser debido a que no se ha definido el tipo de codificacion 
+en el tag meta, es decir utf-8. y al haber una ñha saltado el fallo como que o ha sido reconocido ese caracter.
+
+
+https://www.youtube.com
+
+
+Error: Attribute name not allowed on element link at this point.
+
+En este caso sobra el atributo name dentro del tag link solo habria que quitarlo
+
+
+Error: Element div not allowed as child of element a in this context.
+
+No esta permitido que el elemto div sea hijo del elemento a. se tendria que
+eliminar ese div.
+
+Error: Attribute name not allowed on element script at this point.
+
+Este error se solucionaria quitando el atributo name de el tag script
+
+
