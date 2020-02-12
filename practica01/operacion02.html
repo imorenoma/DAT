@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Nombre: Ivan Moreno Martin, logig: ivmoreno-->
+<!--Pagina para transferencias Bancarias-->
+
+<html lang="es-ES">
+	<head>
+		<title>Transferencia</title>
+		<meta charset="UTF-8">
+	</head>
+
+	<body>
+		<h3>Pagina de transferencias</h3>
+		<form id="transferencia">
+			<label for="iban">IBAN Num</label>
+			<input type="text" id="iban" name="IBAN" maxlength="4" required>
+
+			<label for="Entidad">Entidad</label>
+			<input type="text" id="Entidad" name="Entity" maxlength="4" required>
+
+			<label for="Oficina">Oficina</label>
+			<input type="text" id="Oficina" name="Office" maxlength="4" required>
+
+			<label for="dc">DC</label>
+			<input type="text" id="dc" name="Dc" maxlength="2" required><br><br>
+
+			<label for="Cuenta">Nº de cuenta</label>
+			<input type="text" id="Cuenta" name="Accaunt" maxlength="10" required><br><br><br><br>
+
+			<label for="Cantidad">Euros</label>
+			<input type="text" id="Cantidad" name="Euros" required>
+
+			<input type="submit" value="Send">
+			<input type="reset" value="Reset"><br><br>
+		</form>
+
+		<form action="operacion.html">
+			<input type="submit" value="Back">
+		</form>
+	</body>
+</html>
