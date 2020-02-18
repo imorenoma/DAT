@@ -1,8 +1,10 @@
 Practica 2.1 Analisis de selectores
 +++++++++++++++++++++++++++++++++++
 
+----------
 Ejemplo1:
 ----------
+
 
 * {
       background-color: beige;
@@ -80,4 +82,80 @@ En el siguiente parrafo se aplicara el estilo para la clase feo, por el mismo
 motivo que hemos descrito anteriormente.
 
 por ultimo se aplica el estilo para la clase inverso
+
+----------
+Ejemplo2 :
+----------
+
+
+.españa .toledo {
+  color: red;
+}
+
+la clase tole dentro de la clase españa tendra el color azul
+
+.toledo {
+  color: blue;
+}
+
+la clase toledo el texto sera color azul
+
+.toledo, .cuenca {
+  text-align: center;
+}
+
+para la clase toledo y la clase cuenta el testo estara alineado en el centro
+
+.castilla-la-mancha {
+  text-decoration: underline;
+}
+
+la clase castilla-la-mancha aparecera subrayada
+
+
+a continuacion vemos el body:
+
+<div class="país españa">
+    1.El país España
+    <div class="castilla-la-mancha">
+      2.La comunidad Castilla la Mancha
+      <div class="toledo">
+        3.La ciudad de Toledo
+      </div>
+      <div class="cuenca">
+        4.La ciudad de Cuenca
+      </div>
+      <div class="albacete">
+        5.La ciudad Albacete
+      </div>
+    </div>
+  </div>
+
+  <div class="país estados-unidos">
+    6.El país Estados Unidos
+    <div class="ohio">
+      7.El estado de Ohio
+      <div class="toledo">
+        8.La ciudad de Toledo
+      </div>
+    </div>
+  </div>
+
+como vemos tenemos dos div generales uno seria class=pais españa y por otro
+lado tenemos class=pais estados-unidos". Primero analicemos pais españa
+
+como vemos no hay un .pais españa con lo que no se aplica ningun estilo, sin
+embargo dentro de este div pais españa vemos que hay una clase
+castilla-la-mancha con lo que el texto que venga dentro se ese div vendra
+subrayado, ademas dentro de ese div hay una clase toledo con lo que el texto
+aparecerea en rojo y ademas aparecera alineado a la izquierada. Como ademas
+tenemos una clase cuenca este texto tambien aparecera (por herencia de la
+clase castilla-la-mancha) subrayado y alineado a la izquierda.
+
+
+A continuacion la clse toledo que esta dentro de la clase pais eeuu y 
+dentro de la clase ohio, al no coincidir con ningun estilo definido
+en css, el estilo que se aplica seria el la clase toledo y la clase toledo,
+cuenca por lo que el texto aparecera de color azul, y alineado a la izqd
+
 
