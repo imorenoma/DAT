@@ -207,3 +207,50 @@ color azul (por tener id alpha) ademas tambien se le aplica el estilo
 de p#alpha, es decir, un tamaño de fuente del 200%, y por ultimo
 le aplicamos el estilo de los elementos id=alpha que esten dentro
 del div.
+
+
+----------
+Ejemplo 4:
+----------
+
+
+
+.urjc {
+  color: #CB0017;
+}
+
+Aplicamos ese color a la clase urjc
+
+.urjc.reglamento {
+  text-decoration: underline;
+}
+
+Aplicamos un subrayado a los elementos que dispongan de un atributo class
+con al menos losvalores  urjc y reglamento
+
+.urjc, .reglamento {
+    background-color: lightblue;
+}
+
+se aplicara a los elementos de la class= reglamento que se encuentren dentro
+de un elemento con un class = urjc
+
+
+El body tiene la siguiente forma:
+
+<p>Párrafo 1.</p>
+<p class="reglamento urjc">Párrafo 2, clases reglamento y urjc.</p>
+<p class="reglamento ucm">Párrafo 2, clases reglamento y ucm.</p>
+<p class="matriculacion">Párrafo 3, clase matriculación.</p>
+<p class="investigacion urjc">Párrafo 4, clases investigacion y urjc.</p>
+<p class="investigacion uc3m">Párrafo 4, clases investigacion y uc3m.</p>
+
+
+El parrafo 2 ,clases reglamento... , esta aplicando todos los estilos
+
+En el caso de Parrafo 2 reglamento ucm esta aplicando unicamente el 
+estilo de los elementos .reglamento
+
+Y por ultimo En el Parrafo 4 se esta aplicando los estilos de la clase urjc
+y el estilo elementos que se encuentran dentro de la clase reglamento dentro
+de un elemento con clase .urjc
