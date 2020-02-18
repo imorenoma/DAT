@@ -158,4 +158,52 @@ dentro de la clase ohio, al no coincidir con ningun estilo definido
 en css, el estilo que se aplica seria el la clase toledo y la clase toledo,
 cuenca por lo que el texto aparecera de color azul, y alineado a la izqd
 
+----------
+Ejemplo 3:
+----------
 
+
+#alfa {
+    color: blue;
+}
+
+los id = alpha seran de color azul
+
+p#alfa {
+  font-size: 200%;
+}
+
+todos los parrafos con atributo id=alpha tendran un tamaño de fuente del 200%
+
+div#alfa{
+  background-color: yellow;
+}
+
+todos los elementos de tipo div con atributo id = alpha tendran color de
+fondo amarillo
+
+div #alfa{
+  font-style: italic;
+}
+
+los elemetos con id=alpha que esten dentro de cualquier elemento div
+
+
+El body es el siguiente:
+
+
+<div>
+  <p>Párrafo 1.</p>
+  <p id="alfa">Párrafo 2, llamado alfa. Está dentro de un elemento div, 
+    pero no es un elemento div</p>
+  <p>Párrafo 3.</p>
+</div>
+
+  <p>Párrafo 4. No está dentro de elemento div.</p>
+
+El primer parrafo no tiene definido ningun estilo.
+el segundo parrafo tiene un id = alphacon lo que aplicamos por un lado
+color azul (por tener id alpha) ademas tambien se le aplica el estilo
+de p#alpha, es decir, un tamaño de fuente del 200%, y por ultimo
+le aplicamos el estilo de los elementos id=alpha que esten dentro
+del div.
