@@ -3,8 +3,36 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>First CSS</title>
-		<link rel="stylesheet" href="sheet.css" type="text/css">
+		<style media="screen">
+			body{
+				background-color: #7ca4e7;
+			}
+
+			.quijote .Nombre{
+				color: #fff;
+			}
+
+			.inicio{
+				font-style: oblique;
+			}
+
+			#provincias{
+				font-size: 48px;
+			}
+
+			.libros, .autor{
+				text-align: right;
+				text-decoration: underline;
+			}
+
+			p.autor{
+				color: #d74424;
+				background-color: blue;
+				text-align: left;
+			}
+		</style>
 	</head>
+	
 	<body>
 		<div class="quijote">
 
@@ -15,47 +43,19 @@
 					vivía un hidalgo de los de lanza en astillero, adarga
 					antigua, rocín flaco y galgo corredor.
 				 </p>
+
+				 <p class="Nombre"> Miguel de Cervantes Saavedra</p>
+		</div><br>
+
+		<p id="provincias">He aqui las provincias de castillas o no</p>
+		<p>Aqui no se aplica norma de estilo</p>
+
+
+		<div class="autor libros">
+			<p class="libros">La Galatea, El coloquio de los perros</p>
+			<p> Los trabajos de persiles y segismunda</p>
+			<p class="autor">Mr Miguel</p>
 		</div>
 
-		<div class="autor">
-			<div class="biografia">
-				<p>Se ha conservado una providencia de Felipe II que data de
-					1569, donde manda prender a Miguel de Cervantes, acusado
-					de herir en un duelo a un tal Antonio Sigura, maestro de
-					obras. Si se tratara realmente de Cervantes y no de un
-					homónimo, podría ser este el motivo que le hizo pasar a
-					Italia. Llegó a Roma en diciembre del mismo año. Allí leyó
-					los poemas caballerescos de Ludovico Ariosto, que tanto
-					influirán en el Don Quijote según Marcelino Menéndez Pelayo,
-					y los Diálogos de amor del judío sefardita León Hebreo
-					(Yehuda Abrabanel), de inspiración neoplatónica,
-					que determinarán su idea del amor. Cervantes se imbuye
-					del estilo y del arte de Italia, y guardará siempre tan
-					gratísimo recuerdo de aquellos estados, que al principio
-					de El licenciado Vidriera, una de sus Novelas ejemplares,
-					hace poco menos que una guía turística de ella:
-				</p>
-			</div>
-
-			<p class="biografia">Se pone al servicio de Giulio Acquaviva,
-				que será cardenal en 1570 y a quien probablemente conoció
-				en Madrid.</p>
-
-			<div class="Nombre">
-				<p id="NomyAp">Miguel de Cervantes Saavedra</p>
-			</div>
-
-			<div class="listado">
-				<ol>
-					
-				</ol>
-
-			</div>
-		</div>
-
-
-		<div id="Libros">
-
-		</div>
 	</body>
 </html>
