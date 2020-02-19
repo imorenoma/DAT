@@ -226,7 +226,7 @@ Aplicamos ese color a la clase urjc
 }
 
 Aplicamos un subrayado a los elementos que dispongan de un atributo class
-con al menos losvalores  urjc y reglamento
+con al menos los valores  urjc y reglamento
 
 .urjc, .reglamento {
     background-color: lightblue;
