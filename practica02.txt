@@ -254,3 +254,57 @@ estilo de los elementos .reglamento
 Y por ultimo En el Parrafo 4 se esta aplicando los estilos de la clase urjc
 y el estilo elementos que se encuentran dentro de la clase reglamento dentro
 de un elemento con clase .urjc
+
+
+Practica 2.2 Uso de selectores
+++++++++++++++++++++++++++++++++
+
+Esta pratica esta realizada en el fichero ej22.html, en el que hemos insertado
+un estilo css con ciertas caracteristicas como se describe a continuacion
+
+body{
+ background-color: #7ca4e7;
+}
+
+En el primer ejemplo hemos tomado la etiqueta body y le hemos 
+añadido un color de fondo, esto seria equivalente a * {}
+
+
+.quijote .Nombre{
+     color: #fff;
+}
+
+En este caso lo que hemos hecho que a la clase .Nombre que esta dentro
+de la clase .quijote lo coloree de blanco 
+
+.inicio{
+    font-style: oblique;
+}
+
+En esta definicion hemos decidido que todas las clases inicio tengan como
+estilo de fuente oblique
+
+#provincias{
+    font-size: 48px;
+}
+
+El id proviencias tendra un tamaño de 48 pixeles
+
+.libros, .autor{
+    text-align: right;
+    text-decoration: underline;
+}
+
+Las clases libro y autor tendran como caracteristica que estaran alineados a 
+la derecha y subrallados.
+
+p.autor{
+    color: #d74424;
+    background-color: blue;
+    text-align: left;
+}
+
+
+Con esto vamos a consegui especificar un poco mas por lo que este estilo 
+se aplica a la etiqueta p con clase autor. con lo que a pesar de la
+de la definicion anterior al ser menos especifica predominara p.autor
