@@ -7,3 +7,13 @@ body{
 	font-style: italic;
 	color: #76ceb2
 }
+
+.biografia{
+	font-style: oblique;
+}
+
+#NomyAp{
+	font-size: 24px;
+	text-align: right;
+
+}
