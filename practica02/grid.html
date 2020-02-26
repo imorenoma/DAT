@@ -1,11 +1,119 @@
 <!DOCTYPE html>
 <!-- Nombre: Ivan Moreno Martin login ivmoreno -->
-<html lang="en" dir="ltr">
+<html lang="es-ES">
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>Grid Bootstrap</title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		<style>
+			div {
+				background-color: grey;
+				margin-top: 5px;
+			}
+
+			h1, div.col-md-4{
+				text-align: center;
+			}
+
+			.hinata, .sasuke{
+				max-width: 40%;
+				height: auto;
+			}
+			.naruto{
+				max-width: 39%;
+				height: auto;
+			}
+			.sakura{
+				max-width: 40%;
+				height: auto;
+			}
+		</style>
 	</head>
+
 	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-8">
+					<h1>Hello World</h1>
+				</div>
+				<div class="col-md-4">
+					This is Bootstraaaaap!
+				</div>
+			</div>
+		</div>
+
+<!-- Container of images, dim: 3 col and 4 row each-->
+
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="row-md-4">
+						<img src="naruto.jpeg" class="naruto" alt="naruto_face">
+					</div>
+
+					<div class="row-md-4">
+						<img src="hinata.jpeg"  class="hinata" alt="hinata_face">
+					</div>
+
+					<div class="row-md-4">
+						this is row 2
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="row-md-4">
+						this is row 3
+					</div>
+					<div class="row-md-4">
+						this is row 4
+					</div>
+					<div class="row-md-4">
+						this is row 5
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="row-md-4">
+						<img src="sakura.jpg" class="sakura" alt="sakura_face">
+					</div>
+
+					<div class="row-md-4">
+						<img src="sasuke.jpeg"  class="sasuke" alt="sasuke_face">
+					</div>
+
+					<div class="row-md-4">
+						this is row 8
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+<!-- 1 row 4 cols -->
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-3">
+					this is col1
+				</div>
+				<div class="col-md-3">
+					this is col 2
+				</div>
+				<div class="col-md-3">
+					this is col3
+				</div>
+				<div class="col-md-3">
+					this is col4
+				</div>
+			</div>
+		</div>
 
 	</body>
 </html>
