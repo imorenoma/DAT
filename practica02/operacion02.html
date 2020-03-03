@@ -4,37 +4,58 @@
 
 <html lang="es-ES">
 	<head>
-		<title>Transferencia</title>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>Operation02 Bootstrap</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	</head>
 
 	<body>
-		<h3>Pagina de transferencias</h3>
-		<form id="transferencia">
-			<label for="iban">IBAN Num</label>
-			<input type="text" id="iban" name="IBAN" maxlength="4" required>
+		<div class="container">
+			<h3>Pagina de transferencias</h3>
 
-			<label for="Entidad">Entidad</label>
-			<input type="text" id="Entidad" name="Entity" maxlength="4" required>
+			<form id="transferencia">
+				<div class="form-group">
+					<label for="iban">IBAN Num</label>
+					<input type="text" id="iban" class="form-control" name="IBAN" maxlength="4" required>
+				</div>
 
-			<label for="Oficina">Oficina</label>
-			<input type="text" id="Oficina" name="Office" maxlength="4" required>
+				<div class="form-group">
+					<label for="Entidad">Entidad</label>
+					<input type="text" id="Entidad" class="form-control" name="Entity" maxlength="4" required>
+				</div>
 
-			<label for="dc">DC</label>
-			<input type="text" id="dc" name="Dc" maxlength="2" required><br><br>
+				<div class="form-group">
+					<label for="Oficina">Oficina</label>
+					<input type="text" id="Oficina" class="form-control" name="Office" maxlength="4" required>
+				</div>
 
-			<label for="Cuenta">Nº de cuenta</label>
-			<input type="text" id="Cuenta" name="Accaunt" maxlength="10" required><br><br><br><br>
+				<div class="form-group">
+					<label for="dc">DC</label>
+					<input type="text" id="dc" class="form-control" name="Dc" maxlength="2" required><br><br>
+				</div>
 
-			<label for="Cantidad">Euros</label>
-			<input type="text" id="Cantidad" name="Euros" required>
+				<div class="form-group">
+					<label for="Cuenta">Nº de cuenta</label>
+					<input type="text" id="Cuenta" class="form-control" name="Accaunt" maxlength="10" required><br><br>
+				</div>
 
-			<input type="submit" value="Send">
-			<input type="reset" value="Reset"><br><br>
-		</form>
+				<div class="form-group">
+					<label for="Cantidad">Euros</label>
+					<input type="text" id="Cantidad" class="form-control" name="Euros" required>
+				</div>
 
-		<form action="operacion.html">
-			<input type="submit" value="Back">
-		</form>
+				<input type="submit" value="Send">
+				<input type="reset" value="Reset"><br><br>
+			</form>
+
+			<form action="operacion.html">
+				<input type="submit" value="Back">
+			</form>
+		</div>
 	</body>
 </html>

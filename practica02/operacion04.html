@@ -1,29 +1,44 @@
 <!DOCTYPE html>
+<!--Ivan Moreno Martin, login: ivmoreno-->
 <html lang="es-ES">
 	<head>
 		<meta charset="utf-8">
-		<title>Configuracion de cuenta</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+		<title>Operation04 Bootstrap</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 	</head>
 	<body>
-		<form>
-			<label for="col">Chose frame color</label>
-			<input type="color" id="col">
-		</form><br><br>
+		<div class="container">
+			<form>
+				<div class="form-group">
+					<label for="col">Chose frame color</label>
+					<input type="color" name="color" id="col">
+				</div>
+			</form><br><br>
 
-		<form>
-			<label for="usr">change user</label>
-			<input type="text" id="usr" name="User">
-			<input type="submit" name="Submit" value="check">
-		</form>
+			<form class="form-inline">
+				<div class="form-group">
+					<label for="usr">change user</label>
+					<input type="text" id="usr" name="User">
+				</div>
+				<input type="submit" name="Submit" value="check">
+			</form><br>
 
-		<form>
-			<label for="pswd">change password</label>
-			<input type="password" id="pswd" name="Key">
-			<input type="submit" name="Submit" value="check">
-		</form><br><br>
+			<form class="form-inline">
+				<div class="form-group">
+					<label for="pswd">change password</label>
+					<input type="password" id="pswd" name="Key">
+				</div>
+				<input type="submit" name="Submit" value="check">
+			</form><br><br>
 
-		<form action="operacion.html">
-			<input type="submit" name="Submit" value="Back">
-		</form>
+			<form action="operacion.html">
+				<input type="submit" name="Submit" value="Back">
+			</form>
+		</div>
 	</body>
 </html>
