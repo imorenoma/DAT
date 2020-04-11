@@ -1,28 +1,24 @@
 'use strict'
 function parametros(x, chain) {
 
-	if (chain !== "m") {
-		alert("Error");
-	}else if (chain !== "cm") {
-		alert("Error");
-	}else if (chain !== "in") {
-		alert("Error");
-	}else if (chain !== "yd") {
-		alert("Error");
+	if(isNaN(x)){
+		return("Error: " + x + " is not a Number");
+	}
+
+	if(chain == "m") {
+		return(x + " " + chain);
+	}else if (chain == "cm") {
+		return(x + " " + chain);
+	}else if (chain == "in") {
+		return(x + " " + chain);
+	}else if (chain == "yd") {
+		return(x + " " + chain);
 	}else {
-		if (chain == "m") {
-			return x.toString() + " " + chain;
-		}else if (chain == "cm") {
-			return x.toString() + " " + chain;
-		}else if (chain == "in") {
-			return x.toString() + " " + chain;
-		}else {
-			return x.toString() + " " + chain;
-		}
+		return("Error: " + chain + " not available")
 	}
 }
 
-var number = 7;
+var num = 1.0;
 var unit = "m";
 
-console.log(parametros(number,unit));
+console.log(parametros(num,unit));
