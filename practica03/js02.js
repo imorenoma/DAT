@@ -1,22 +1,23 @@
-function parametros(x,chain){
+'use strict'
+function parametros(x, chain) {
 
-	if (chain != "m") {
-		console.log("Error");
-	}else if (chain != "cm") {
-		console.log("Error");
-	}else if (chain != "in") {
-		console.log("Error");
-	}else if (chain != "yd"){
-		console.log("Error");
-	}else{
+	if (chain !== "m") {
+		alert("Error");
+	}else if (chain !== "cm") {
+		alert("Error");
+	}else if (chain !== "in") {
+		alert("Error");
+	}else if (chain !== "yd") {
+		alert("Error");
+	}else {
 		if (chain == "m") {
-			return(x + " " + chain);
+			return x.toString() + " " + chain;
 		}else if (chain == "cm") {
-			return(x + " " + chain);
+			return x.toString() + " " + chain;
 		}else if (chain == "in") {
-			return(x + " " + chain);
+			return x.toString() + " " + chain;
 		}else {
-			return(x + " " + chain);
+			return x.toString() + " " + chain;
 		}
 	}
 }
