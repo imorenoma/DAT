@@ -13,18 +13,22 @@ function main(){
 
     diametro = 5;
 
-    for (let x=0; x <= 10; x += diametro)
-        for (let y=0; y <= 50; y += diametro) {
-            vjcanvas.circle(x, y, diametro, colors[1]);
+	//Creating multiple circles
+    for (let x=5; x <= 15; x += diametro)
+        for (let y=0; y <= 60; y += diametro) {
+            vjcanvas.circle(x, y, diametro, colors[0]);
     }
-	for (let x = 15; x <=25; x += diametro)
-		for(let y=0; y <= 50; y += diametro){
-			vjcanvas.rectangle(x, y, 5, 5, colors[0]);
+
+	//creating multiple squares with function rectangle
+	for (let x = 25; x <=35; x += 6)
+		for(let y=0; y <= 60; y += 11){
+			vjcanvas.rectangle(x, y, 5, 5, colors[1]);
 		}
 
-	for (let x = 35; x <=45; x += diametro)
-		for(let y=0; y <= 50; y += diametro){
-			vjcanvas.rectangle(x, y, 5, 4,colors[2]);
+	//Creating multiple rectangles	
+	for (let x = 45; x <=55; x += 10)
+		for(let y=0; y <= 60; y += 11){
+			vjcanvas.rectangle(x, y, 7, 5,colors[2]);
 		}
 
 
