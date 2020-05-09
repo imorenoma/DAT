@@ -1,4 +1,5 @@
 'use strict'
+//Nombre: Ivan Moreno Martin, logig: ivmoreno
 function parametros(x, chain) {
 
 	if(isNaN(x)){

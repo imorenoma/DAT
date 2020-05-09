@@ -1,4 +1,5 @@
 'use strict'
+// Nombre: Ivan Moreno Martin, logig: ivmoreno
 function pasocm(m){
     return(m*100);
 }
