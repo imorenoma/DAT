@@ -4,33 +4,59 @@ $(document).ready(function() {
 	change = false;
 	jap = false;
 	gb = false;
-	esp=false;
+	esp=true;
 
-		$(".jap").click(function(){
-			jap = true;
-		});
+	$(".jap").click(function(){
+		esp =false;
+		jap = true;
+		gb = false;
+	});
+	$(".ing").click(function(){
+		esp =false;
+		gb = true;
+		jap=false;
+	});
+
+	$(".esp").click(function(){
+		esp =true;
+		gb = false;
+		jap=false;
+	});
 
       $("#toggle-it").click(function() {
-		  if (change==false && jap==false && gb ==false) {
+		  if (change==false && jap==false && gb ==false && esp==true) {
 		  	$("#image").show("oculto");
 			let v_text = $("#toggle-it").text();
 			let v_out = idiomas.spClose;
 			$("#toggle-it").text(v_out);
 			change=true;
-		}else if (change==false && jap==true && gb==false) {
+
+		}else if (change==false && jap==true && gb==false && esp==false) { //japones ocultar
 			$("#image").show("oculto");
 			let v_text = $("#toggle-it").text();
 			let v_out = idiomas.japClose;
 			$("#toggle-it").text(v_out);
 			change=true;
-		}else if (change==true && jap==true && gb==false) {
+		}else if (change==true && jap==true && gb==false && esp==false) { //japones mostrar
 			$("#image").hide("oculto");
 			let v_text = $("#toggle-it").text();
 			let v_out2 = idiomas.japOpen;
 			$("#toggle-it").text(v_out2);
 			change=false;
-		}else{
 
+		}else if (change == false && jap==false && gb == true && esp==false) {
+			$("#image").show("oculto");
+			let v_text = $("#toggle-it").text();
+			let v_out = idiomas.ingClose;
+			$("#toggle-it").text(v_out);
+			change=true;
+		}else if (change == true && jap==false && gb == true && esp==false) {
+			$("#image").hide("oculto");
+			let v_text = $("#toggle-it").text();
+			let v_out2 = idiomas.ingOpen;
+			$("#toggle-it").text(v_out2);
+			change=false;
+		}else{
 			$("#image").hide("oculto");
 			let v_text = $("#toggle-it").text();
 			let v_out2 = idiomas.spOpen;
@@ -39,34 +65,3 @@ $(document).ready(function() {
 		}
 	});
 });
-
-
-
-
-/*
-$(".jap").click(function(){
-	if(change == false){
-	   let v_text = $("#toggle-it").text();
-	   let v_out = "示す";
-	   $("#toggle-it").text(v_out);
-	   change = true;
-   }else{
-	   let v_text = $("#toggle-it").text();
-	   let vout="隠す";
-	   $("#toggle-it").text(v_out);
-	   change = false;
-   }
-});
-
-	 $(".gb").click(function(){
-		 let v_text = $("#toggle-it").text();
-		 let v_out = "Show";
-		 $("#toggle-it").text(v_out);
-	 });
-
-	 $(".esp").click(function(){
-		 let v_text = $("#toggle-it").text();
-		 let v_out = "mostrar";
-		 $("#toggle-it").text(v_out);
-	 });
-	 */
