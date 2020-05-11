@@ -7,6 +7,7 @@ $(document).ready(function() {
 	esp=true;
 	let myReg;
 
+
 	$(".jap").click(function(){
 		esp =false;
 		jP = true;
@@ -14,6 +15,10 @@ $(document).ready(function() {
 
 		myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Configuramos el interface en Japones" + '</td></tr>';
 		$("#Registro").append(myReg);
+
+		if($("table > tbody > tr").length == 11){
+				$(".element").remove();
+			}
 	});
 
 	$(".ing").click(function(){
@@ -23,6 +28,10 @@ $(document).ready(function() {
 
 		myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Configuramos el interface en Ingles" + '</td></tr>';
 		$("#Registro").append(myReg);
+
+		if($("table > tbody > tr").length == 11){
+				$(".element").remove();
+		}
 	});
 
 	$(".esp").click(function(){
@@ -32,6 +41,10 @@ $(document).ready(function() {
 
 		myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Configuramos el interface en Español" + '</td></tr>';
 		$("#Registro").append(myReg);
+
+		if($("table > tbody > tr").length == 11){
+				$(".element").remove();
+		}
 	});
 
 	$("#toggle-it").click(function() {
@@ -118,7 +131,7 @@ $(document).ready(function() {
 			$("#Registro").append(myReg);
 		}
 
-		if($("table > tbody > tr").length >= 10){
+		if($("table > tbody > tr").length == 11){
 			$(".element").remove();
 		}
 
