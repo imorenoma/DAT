@@ -7,6 +7,7 @@ $(document).ready(function() {
 	esp=true;
 	let myReg;
 
+	$('[data-toggle="tooltip"]').tooltip();
 
 	$(".jap").click(function(){
 		esp =false;
@@ -18,7 +19,8 @@ $(document).ready(function() {
 
 		if($("table > tbody > tr").length == 11){
 				$(".element").remove();
-			}
+		}
+
 	});
 
 	$(".ing").click(function(){
