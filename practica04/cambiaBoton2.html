@@ -1,6 +1,6 @@
 <!-- Ivan Moreno Martin, usr: ivmoreno-->
 <!DOCTYPE html>
-<html lang="es.ES">
+<html lang="es-ES">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,14 +24,14 @@
 			}
 
 			.jap{
-				width: 30px;
+				width: 40px;
 			}
 			.ing{
-				width: 30px;
+				width: 40px;
 			}
 
 			.esp{
-				width: 30px;
+				width: 40px;
 			}
 
 
@@ -44,25 +44,41 @@
 	</head>
 
 	<body>
+
 		<div class="container">
 			<div class="row">
-				<button type="button" id="toggle-it">Mostrar</button>
-				<div id="image" class="oculto">
-					<img src="img/sky.jpg" alt="stars">
+				<div class="col-md-8">
+					<button type="button" id="toggle-it" data-toggle="tooltip" title="Aqui se muestra u oculta una imagen" data-placement="bottom" >Mostrar</button>
+					<div id="image" class="oculto">
+						<img src="img/sky.jpg" alt="stars">
+					</div>
 				</div>
 			</div><br>
-			<div class="idiomas" id="lang">
-					<img class="jap" src="img/jap.jpg" alt="japones">
-					<img class="ing" src="img/gb.jpg" alt="Ingles">
-					<img class="esp" src="img/esp.jpg" alt="Español">
-			</div><br>
+		</div>
 
-			<table id="Registro">
-				<tr>
-				  <th>Fecha</th>
-				  <th>Evento</th>
-				</tr>
-			</table>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<div class="idiomas" id="lang">
+							<img class="jap" src="img/jap.jpg" alt="japones" data-toggle="tooltip" title="Cambio de idioma a japones" data-placement="right">
+							<img class="ing" src="img/gb.jpg" alt="Ingles">
+							<img class="esp" src="img/esp.jpg" alt="Español">
+					</div><br>
+				</div>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<table id="Registro">
+						<tr>
+						  <th>Fecha</th>
+						  <th>Evento</th>
+						</tr>
+					</table>
+				</div>
+			</div>
 		</div>
 	</body>
 </html>
