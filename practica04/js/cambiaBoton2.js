@@ -12,7 +12,7 @@ $(document).ready(function() {
 		jP = true;
 		gb = false;
 
-		myReg = '<tr><td>' + moment().format() + '</td><td>' + "Configuramos el interface en Japones" + '</td></tr>';
+		myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Configuramos el interface en Japones" + '</td></tr>';
 		$("#Registro").append(myReg);
 	});
 
@@ -21,7 +21,7 @@ $(document).ready(function() {
 		gb = true;
 		jP=false;
 
-		myReg = '<tr><td>' + moment().format() + '</td><td>' + "Configuramos el interface en Ingles" + '</td></tr>';
+		myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Configuramos el interface en Ingles" + '</td></tr>';
 		$("#Registro").append(myReg);
 	});
 
@@ -30,7 +30,7 @@ $(document).ready(function() {
 		gb = false;
 		jP=false;
 
-		myReg = '<tr><td>' + moment().format() + '</td><td>' + "Configuramos el interface en Español" + '</td></tr>';
+		myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Configuramos el interface en Español" + '</td></tr>';
 		$("#Registro").append(myReg);
 	});
 
@@ -48,7 +48,7 @@ $(document).ready(function() {
 			$("#toggle-it").text(v_out);
 			change=true;
 
-			let myReg = '<tr><td>' + moment().format() + '</td><td>' + "Mostrar Imagen" + '</td></tr>';
+			let myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Mostrar Imagen" + '</td></tr>';
 			$("#Registro").append(myReg);
 
 /*-------------------------------------------------------*/
@@ -63,7 +63,7 @@ $(document).ready(function() {
 			$("#toggle-it").text(v_out);
 			change=true;
 
-			let myReg = '<tr><td>' + moment().format() + '</td><td>' + "Mostar Imagen" + '</td></tr>';
+			let myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Mostar Imagen" + '</td></tr>';
 			$("#Registro").append(myReg);
 
 		/*cambio boton a mostrar en japones y ocultamos la imagen*/
@@ -74,7 +74,7 @@ $(document).ready(function() {
 			$("#toggle-it").text(v_out2);
 			change=false;
 
-			myReg = '<tr><td>' + moment().format() + '</td><td>' + "Ocultar Imagen" + '</td></tr>';
+			myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Ocultar Imagen" + '</td></tr>';
 			$("#Registro").append(myReg);
 
 
@@ -90,7 +90,7 @@ $(document).ready(function() {
 			$("#toggle-it").text(v_out);
 			change=true;
 
-			myReg = '<tr><td>' + moment().format() + '</td><td>' + "Mostar Imagen" + '</td></tr>';
+			myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Mostar Imagen" + '</td></tr>';
 			$("#Registro").append(myReg);
 
 		/*cambio boton a mostrar en ingles y ocultamos la imagen*/
@@ -101,7 +101,7 @@ $(document).ready(function() {
 			$("#toggle-it").text(v_out2);
 			change=false;
 
-			myReg = '<tr><td>' + moment().format() + '</td><td>' + "Ocultar Imagen" + '</td></tr>';
+			myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Ocultar Imagen" + '</td></tr>';
 			$("#Registro").append(myReg);
 
 		/*si no cumple ninguna de las condiciones anteriores
@@ -114,8 +114,12 @@ $(document).ready(function() {
 			$("#toggle-it").text(v_out2);
 			change=false;
 
-			myReg = '<tr><td>' + moment().format() + '</td><td>' + "Ocultar Imagen" + '</td></tr>';
+			myReg = '<tr class="element"><td>' + moment().format() + '</td><td>' + "Ocultar Imagen" + '</td></tr>';
 			$("#Registro").append(myReg);
+		}
+
+		if($("table > tbody > tr").length >= 10){
+			$(".element").remove();
 		}
 
 	});
