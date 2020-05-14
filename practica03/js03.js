@@ -57,11 +57,11 @@ function validator(pass){
 	}
 
 	if (cont == 1) {
-		return("You need 2 or more Uppecase char you have " + cont);
+		return("Error: " + "You need 2 or more Uppecase char you have " + cont);
 	}
 
 	if(cont2 == 1){
-		return("You need 2 or more Lowercase char you have " + cont2);
+		return("Error: " + "You need 2 or more Lowercase char you have " + cont2);
 	}
 
 	if(mayus == true && minus == true && numbers == true && specialchar == true){
