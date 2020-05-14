@@ -20,7 +20,7 @@ $(document).ready(function() {
 		diff_seg1 = (fech_act-dia1)/1000; //diferencia en segundos
 		diff_dias = (diff_seg1 / dia).toFixed(0); //diferencia dias
 		/*OPERACION HORAS*/
-		diff_horas = (diff_seg1 /horas).toFixed(0);
+		diff_horas = (diff_seg1 / horas).toFixed(0);
 		/*OPERACION Minutos*/
 		diff_minutos = (diff_seg1 / minutos).toFixed(0);
 
@@ -40,7 +40,7 @@ $(document).ready(function() {
 		diff_minutos2 = (diff_seg2 / minutos).toFixed(0);
 
 		alarma = "dias: " + diff_dias2 + " Horas: " + diff_horas2 + " minutos: " + diff_minutos2;
-		myReg2 = '<tr class="element"><td>' + "14/03/2020" + '</td><td>' + alarma + '</td></tr>';
+		myReg2 = '<tr class="element"><td>' + fech_act + '</td><td>' + alarma + '</td></tr>';
 		$("#Registro").append(myReg2);
 
 		if($("table > tbody > tr").length >= 4){
