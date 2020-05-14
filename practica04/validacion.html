@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Nombre: Ivan Moreno Martin User: ivmoreno-->
+<html lang="es-ES">
+	<head>
+		<meta charset="utf-8">
+		<title>Validacion</title>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 <script src="~/Ecritorio/DAT/practica03/js03.js"></script>
+
+		 <script>
+		 	$("#check").click(function(){
+				let ack;
+				ack = validator("#contrasenia");
+
+				if(ack=="ok"){
+					let v_text = $("#pos_neg").text();
+					let v_vout="Contraseña correcta";
+					$("#pos_neg").text(vout)
+				}else{
+					let v_text2 = $("#pos_neg").text();
+					let v_vout2="Contraseña incorrecta";
+					$("#pos_neg").text(vout2);
+				}
+			})
+		 </script>
+
+	</head>
+	<body>
+		<form>
+			<label for="usuario">Usuario</label>
+    		<input type="text" name="usuario" id="usuario">
+    		<br>
+    		<label for="passwd">Contraseña</label>
+    		<input type="password" name="pass" id="contrasenia">
+    		<div id="validacion">
+				<p id="pos_neg"></p>
+			</div>
+    		<br>
+    		<button type="button" name="button" id="check">Summit</button>
+		</form>
+
+	</body>
+</html>
