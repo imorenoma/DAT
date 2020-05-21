@@ -5,9 +5,20 @@
     <title>Localized OpenStreetMap</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="" />
+	<script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin=""></script>
+
+	<style>
+		#map{
+			height: 400px;
+		}
+	</style>
   </head>
+
   <body>
-    <div id="map" class="map">
-		<iframe width="1000" height="490" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-3.859752416610718%2C40.31801705153464%2C-3.8515341281890874%2C40.32268787606923&amp;layer=mapnik" style="border: 1px solid black"></iframe>
-	</div>
+
+    <div id="map" class="map"></div>
+	<script src="geo.js">
+
+	</script>
 </html>

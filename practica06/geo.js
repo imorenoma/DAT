@@ -1,42 +1,29 @@
 'use strict'
-//import * as vjcanvas from "../practica05/vjcanvas.js"
+$(document).ready(function() {
+	let latitud=40.3175; //coordenada y
+	let longitud=-3.8602; //coordenada x
+	let zoom=16;
 
-function coordsAlea(){
+	let mi_mapa = L.map('map').setView([latitud, longitud], zoom);
 
-/*
-		let min_x = -1;
-	    let max_x = 1;
-	    let min_y = -.6;
+     L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
+      }).addTo(mi_mapa);
 
-	    vjcanvas.set_coords(min_x, max_x, min_y);
 
-	    let x, y, grosor, alto, radio, color;
-	    color = "black"
-	    radio = max_x / 2;
-	    let incremento = .02;
-	    grosor = 2;
+	  var circle = L.circle([40.32153, -3.8513], {
+			color: 'blue',
+			fillColor: 'blue',
+			fillOpacity: 0.6,
+			radius: 200
+		}).addTo(mi_mapa);
 
-	    for (let angulo = 0; angulo <= 2 * Math.PI ; angulo = angulo + incremento){
-	        y = Math.sin(angulo) * radio;
-	        x = Math.cos(angulo) * radio;
-	        vjcanvas.dot(x, y, color, grosor);
-	    };*/
-/*
-	let numRnd = Math.random() * (( 2 * Math.PI) - 0) + 0;
 
-	let sin = Math.sin(numRnd * Math.PI / 180);
-	let cos = Math.cos(numRnd * Math.PI / 180);
-
-	let radRnd = (Math.random() * (( Math.PI * 2) - 0) + 0)/2;
-
-	let x = radRnd * sin;
-	let y = radRnd * cos;
-
-	let coords = [x , y];
-	return coords;
-*/
-
-}
+		var popup = L.popup()
+  			.setLatLng([40.32153, -3.8513])
+      		.setContent("I am a standalone popup.")
+      		.openOn(mi_mapa);
+});
 
 
 let datos = {"d1" : ["long","lat", "radius", "contagiados", "altas", "fallecidos"],
@@ -45,6 +32,6 @@ let datos = {"d1" : ["long","lat", "radius", "contagiados", "altas", "fallecidos
 "d4" : ["long","lat", "radius", "contagiados", "altas", "fallecidos"]
 };
 
-console.log(typeof(datos), datos);
+//console.log(typeof(datos), datos);
 
-console.log(coordsAlea());
+//console.log(coordsAlea());
