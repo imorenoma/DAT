@@ -14,15 +14,19 @@ $(document).ready(function() {
 	  var circle = L.circle([40.32153, -3.8513], {
 			color: 'blue',
 			fillColor: 'blue',
-			fillOpacity: 0.6,
+			fillOpacity: 0.3,
 			radius: 200
 		}).addTo(mi_mapa);
 
 
-		var popup = L.popup()
+		/*var popup = L.popup()
   			.setLatLng([40.32153, -3.8513])
       		.setContent("I am a standalone popup.")
-      		.openOn(mi_mapa);
+      		.openOn(mi_mapa);*/
+
+		let coords_most = [40.32153, -3.8513];
+		let marcador1 = L.marker(coords_most).addTo(mi_mapa); //creamos el marcador
+		marcador1.bindPopup("Marca").openPopup(); //generamos el popup
 });
 
 
