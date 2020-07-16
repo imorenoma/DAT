@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Nombre: Ivan Moreno Martin User: ivmoreno-->
+
+<html lang="es-ES">
+	<head>
+		<meta charset="utf-8">
+		<title>Validacion 2</title>
+		 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		 <script type="text/javascript" src="validacion2.js"></script>
+	</head>
+	<body>
+		<form>
+			<label for="usuario">Usuario</label>
+    		<input type="text" name="usuario" id="usuario">
+
+			<label for="contrasenia">Contraseña</label>
+    		<input type="password" name="contrasenia" id="contrasenia">
+
+			<label for="contrasenia2">Repite contraseña</label>
+			<input type="password" name="contrasenia2" id="contrasenia2">
+			<input type="button" onclick="saveData()" value="Save">
+			<br>
+			<div id="Data"><p>Click here to show your name and psswd</p></div>
+			<input type="button" onclick="trace()" value="trace Data">
+			<br><br>
+			<div id="validacion"></div>
+			<div id="igualdad"></div>
+		</form>
+
+		<script>
+			$(document).ready(function() {
+
+				$("#contrasenia").on("change keyup paste mouseup", function() {
+					let pass1 = $("#contrasenia").val();
+					let pass2 = $("#contrasenia2").val();
+
+					if ($(this).val().length >= 8) {
+						if(pass1 === pass2){
+							 $("#igualdad").text("son iguales")
+						}else{
+							 $("#igualdad").text("no son iguales");
+						}
+					}
+			   });
+			 });
+		</script>
+	</body>
+</html>
