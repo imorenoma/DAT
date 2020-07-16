@@ -14,19 +14,31 @@
     		<br>
     		<label for="contrasenia">Contraseña</label>
     		<input type="password" name="contrasenia" id="contrasenia">
-    		<div id="validacion"></div>
-    		<br>
-    		<input type="submit">
+
+			<label for="contrasenia2">Repite contraseña</label>
+			<input type="password" name="contrasenia2" id="contrasenia2">
+
+			<br>
+			<div id="validacion"></div>
+			<div id="igualdad"></div>
+			<br>
+
 		</form>
 
 		<script>
 			$(document).ready(function() {
-				 $("#contrasenia").on("change keyup paste mouseup", function() {
-				   if (validator("#contrasenia")=="ok") {
-					$("#validacion").text("Contraseña aceptable");
-				   } else {
-					 $("#validacion").text("Contraseña muy corta");
-				   };
+
+				$("#contrasenia").on("change keyup paste mouseup", function() {
+					let pass1 = $("#contrasenia").val();
+					let pass2 = $("#contrasenia2").val();
+
+					if ($(this).val().length >= 8) {
+						if(pass1 === pass2){
+							 $("#igualdad").text("son iguales")
+						}else{
+							 $("#igualdad").text("no son iguales");
+						}
+					}				   
 			   });
 			 });
 		</script>
