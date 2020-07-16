@@ -3,30 +3,45 @@ $(document).ready(function() {
 	let latitud=40.3175; //coordenada y
 	let longitud=-3.8602; //coordenada x
 	let zoom=16;
+	let colors = ['red', 'green', 'blue'];
 
 /*---------------JSON DATA SECTION---------------*/
 
-	let datos = {"d1" : ["11", "3", "5", "50", "44", "20"],
-	"d2" : ["long","lat", "6", "44", "11", "8"],
-	"d3" : ["long","lat", "0.2", "60", "1", "1"],
-	"d4" : ["long","lat", "10", "90", "13", "33"],
-	"d5" : ["long","lat", "5", "77", "20", "20"],
-	"d6" : ["long","lat", "4", "66", "0", "11"],
-	"d7" : ["long","lat", "20", "300", "0", "100"],
-	"d8" : ["long","lat", "11", "42", "11", "40"],
-	"d9" : ["long","lat", "0.6", "111", "23", "1"],
-	"d10" : ["long","lat", "0.3", "101", "4", "0"],
-	"d11" : ["long","lat", "2.5", "22", "2", "2"],
-	"d12" : ["long","lat", "7", "40", "21", "6"],
-	"d13" : ["long","lat", "6.5", "65", "44", "3"],
-	"d14" : ["long","lat", "2.2", "102", "33", "2"],
-	"d15" : ["long","lat", "4.3", "67", "3", "4"]
-}
+	let datos = {"d1" : ["40.3210369", "-3.8500770", "50", "44", "20"]}
 
-	//console.log(typeof(datos), datos.d1[2]);
-	/*---------------------------------------*/
+	let datos2 = '{"latitud": 40.32153, "longitud": -3.8513, "contagiados":50 , "altas": 44  ,"fallecidos":30}'
 
-/*MAP SECTION*/
+	function parseLat(){
+		let lat1 = JSON.parse(datos2);
+		var my_lat = lat1.latitud;
+		return my_lat;
+	}
+
+	function parseLong(){
+		let long1 =JSON.parse(datos2);
+		var my_long = long1.longitud;
+		return my_long;
+	}
+
+	function parseContag(){
+		let contag1 = JSON.parse(datos2);
+		var my_contag = contag1.contagiados;
+		return my_contag;
+	}
+
+	function parseAltas(){
+		let alta1 = JSON.parse(datos2);
+		var my_alta = alta1.altas;
+		return my_alta;
+	}
+
+	function parseFalle(){
+		let falle1 = JSON.parse(datos2);
+		var my_falle = falle1.fallecidos;
+		return my_falle;
+	}
+
+/*------------------------------MAP SECTION----------------------------------*/
 
 	let mi_mapa = L.map('map').setView([latitud, longitud], zoom);
 
@@ -34,29 +49,42 @@ $(document).ready(function() {
         attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a>'
       }).addTo(mi_mapa);
 
-/*CIRCLE SECTION*/
-	  var circle = L.circle([40.32153, -3.8513], {
-			color: 'blue',
-			fillColor: 'blue',
-			fillOpacity: 0.2,
-			radius: 200
-		}).addTo(mi_mapa);
+/*---------------------------MARKER SECTION-----------------------------------*/
+		var lat1 = parseLat();
+		var long1 = parseLong();
+		var contag1 = parseContag();
+		var altas1 = parseAltas()
+		var falle1 = parseFalle();
 
-/*MARKER SECTION*/
 
-		let coords_most = [40.32153, -3.8513];
-		let marcador1 = L.marker(coords_most).addTo(mi_mapa); //creamos el marcador
+		var orangeIcon = new L.icon({
+			iconUrl : 'leaf-orange.png',
+			iconSize: [50, 55], // size of the icon
+ 			shadowSize:   [50, 64], // size of the shadow
+ 			iconAnchor:   [25, 50], // point of the icon which will correspond to marker's location
+ 			shadowAnchor: [4, 62],  // the same for the shadow
+ 			popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+		});
 
-		//generamos el popup con datos del JSON
-		marcador1.bindPopup("contagiados: " + datos.d1[3] + " " + "altas: " + datos.d1[4] + " " + "fallecidos: " +  datos.d1[5]).openPopup();
+		var greenIcon =new L.icon({
+			iconUrl : 'leaf-green.png',
+			iconSize: [50, 55],
+ 			shadowSize:   [50, 64],
+ 			iconAnchor:   [25, 50],
+ 			shadowAnchor: [4, 62],
+ 			popupAnchor:  [-3, -76]
+		});
 
-		let coord_most2 = [40.3210369, -3.8500770];
-		let marcador2 = L.marker(coord_most2).addTo(mi_mapa);
-		marcador2.bindPopup("contagiados: " + datos.d2[3] + " " + "altas: " + datos.d2[4] + " " + "fallecidos: " +  datos.d2[5]).openPopup();
+		let coord_most = [datos.d1[0],datos.d1[1]];
+		let marcador1 = L.marker(coord_most,{icon:orangeIcon}).addTo(mi_mapa);
+		marcador1.bindPopup("contagiados: " + datos.d1[2] + " " + "altas: " + datos.d1[3] + " " + "fallecidos: " +  datos.d1[4]).openPopup();
+
+		let coords_most2 = [lat1, long1];
+		let marcador2 = L.marker(coords_most2,{icon:greenIcon}).addTo(mi_mapa); //creamos el marcador
+		marcador2.bindPopup("contagiados: " + contag1 + " altas: " + altas1 + " fallecidos: " + falle1).openPopup();//generamos el popup con datos del JSON
+
 });
 
-/*NOTES SECTION*/
 
-	//"d4" : ["long","lat", "radius", "contagiados", "altas", "fallecidos"]
-	//console.log(typeof(datos), datos);
-	//console.log(coordsAlea());
+/*ESTE EJERCICIO HA SIDO REALIZADO DE DOS FORMAS DISTINTAS CON DOS FORMAS DE JSON
+TAMBIEN SE HAN CAMBIADO LOS ICONO Y SE HAN PUESTO UNOS PERSONALIZADOS*/
