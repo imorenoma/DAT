@@ -46,29 +46,10 @@ function validator(pass){
 			}
 		}
 
-		
-		if((cont == 0 || cont >= 2) && (cont2 == 0 || cont2 >= 2) && cont3 >= 0 && cont4 >= 0){
-				mayus = true;
-				minus =true;
-				numbers = true;
-				specialchar = true;
-		}
-
-		if (cont == 1) {
-			return("Error: " + "You need 2 or more Uppecase char you have " + cont);
-		}
-
-		if(cont2 == 1){
-			return("Error: " + "You need 2 or more Lowercase char you have " + cont2);
-		}
-
-		if(mayus == true && minus == true && numbers == true && specialchar == true){
-			return "ok";
-		}
 	}else{
 		return("Error: password to short, minimun length 8");
 	}
-/*
+
 	if((cont == 0 || cont >= 2) && (cont2 == 0 || cont2 >= 2) && cont3 >= 0 && cont4 >= 0){
 			mayus = true;
 			minus =true;
@@ -87,7 +68,6 @@ function validator(pass){
 	if(mayus == true && minus == true && numbers == true && specialchar == true){
 		return "ok";
 	}
-*/
 }
 
 
