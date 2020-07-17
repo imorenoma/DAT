@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 	function success(pos){
 
-		/*MAP SECTION*/
+/*---------------------MAP SECTION-------------------------*/
 		let x = pos.coords;
 		let latitud = x.latitude;
 		let longitud = x.longitude;
@@ -29,7 +29,7 @@ $(document).ready(function() {
 		 marker.bindPopup("Home").openPopup();
 
 
-		 /*LocalStorage Section*/
+/*------------------LocalStorage Section------------------*/
 
 		 let init_point = "start";
 		 let home_point = localStorage.getItem(init_point);
@@ -41,6 +41,7 @@ $(document).ready(function() {
 			 marker_home.bindPopup("Usted esta aqui");
 			 $("#Clean").show();
 		 }
+
 		 /*MAXIMUN RADIUS, IN THIS CASE 1 KM */
 
 		 var circle = L.circle([latitud, longitud], {
@@ -51,19 +52,22 @@ $(document).ready(function() {
 	  }).addTo(mi_mapa);
 
 
-		 /*FUNCIONALIDAD BOTONES*/
+/*------------------FUNCIONALIDAD BOTONES---------------------*/
 
 		 $("#Save").click(function(){
 			 let home_point = [latitud, longitud];
+
 			 localStorage.removeItem(init_point);
 			 localStorage.setItem(init_point, JSON.stringify(home_point));
+
 			 let marker_home = L.marker(home_point).addTo(mi_mapa);
+
 			 marker_home.bindPopup("Usted esta aqui").openPopup();
 			 $("#Clean").show();
 		 });
 
-		 $("#delete").click(function(){
-            localStorage.removeItem(init_point);
+		 $("#Clean").click(function(){
+			localStorage.removeItem(init_point);
             $("#Clean").hide();
         });
 
