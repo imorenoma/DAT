@@ -39,7 +39,7 @@ $(document).ready(function() {
 			 home_point = JSON.parse(home_point);
 			 let marker_home = L.marker(home_point).addTo(mi_mapa);
 			 marker_home.bindPopup("Usted esta aqui");
-			
+
 		 }
 
 		 /*MAXIMUN RADIUS, IN THIS CASE 1 KM */
@@ -52,7 +52,7 @@ $(document).ready(function() {
 	  }).addTo(mi_mapa);
 
 
-/*------------------FUNCIONALIDAD BOTONES---------------------*/
+	  	/*------------------FUNCIONALIDAD BOTONES---------------------*/
 
 		 $("#Save").click(function(){
 			 let home_point = [latitud, longitud];
@@ -70,7 +70,6 @@ $(document).ready(function() {
 			localStorage.removeItem(init_point);
             $("#Clean").hide();
         });
-
 	}
 
 	function error(err) {
