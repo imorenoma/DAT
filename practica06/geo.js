@@ -3,7 +3,7 @@ $(document).ready(function() {
 	let latitud=40.3175; //coordenada y
 	let longitud=-3.8602; //coordenada x
 	let zoom=16;
-	let colors = ['red', 'green', 'blue'];
+	
 
 /*---------------JSON DATA SECTION---------------*/
 
