@@ -39,7 +39,7 @@ $(document).ready(function() {
 			 home_point = JSON.parse(home_point);
 			 let marker_home = L.marker(home_point).addTo(mi_mapa);
 			 marker_home.bindPopup("Usted esta aqui");
-			 $("#Clean").show();
+			
 		 }
 
 		 /*MAXIMUN RADIUS, IN THIS CASE 1 KM */
