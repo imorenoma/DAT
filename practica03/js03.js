@@ -1,5 +1,5 @@
 'use strict'
-//Nombre: Ivan Moreno Martin, logig: ivmoreno
+//Nombre: Ivan Moreno Martin, login: ivmoreno
 function validator(pass){
 	var mayus = false;
 	var upper = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ";
