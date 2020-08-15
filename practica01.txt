@@ -1,4 +1,4 @@
-Ivan Moreno Martin ivmoreno
+Ivan Moreno Martin
 
 Analiza con el W3C Markup Validation Service el 
 codigo de 3 sitios web. Han de pertenecer a organismos o empresas 
